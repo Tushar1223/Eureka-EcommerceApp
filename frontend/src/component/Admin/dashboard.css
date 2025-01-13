@@ -1,0 +1,169 @@
+/* Main dashboard grid layout */
+.dashboard {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* Adjusted for better proportion */
+  position: relative;
+  background-color: #f8f9fc; /* Light background for a professional look */
+}
+
+/* Dashboard container styling */
+.dashboardContainer {
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  min-height: 100vh;
+}
+
+/* Dashboard title */
+.dashboardContainer > h1 {
+  color: #333;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+  width: 60%;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-bottom: 2px solid #eee;
+}
+
+/* Summary section styling */
+.dashboardSummary {
+  margin: 3rem 0;
+}
+
+.dashboardSummary > div {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.dashboardSummary > div > p {
+  background-color: #4675da; /* Updated to a vibrant blue */
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dashboardSummary > div > p:hover {
+  background-color: #345b9e; /* Darken on hover for effect */
+}
+
+/* Summary box with circular buttons */
+.dashboardSummaryBox2 > a {
+  color: #333;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: #ffeaa7; /* Subtle yellow for neutral look */
+  text-decoration: none;
+  padding: 2rem;
+  width: 10vmax;
+  height: 10vmax;
+  margin: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add shadow */
+}
+
+.dashboardSummaryBox2 > a:first-child {
+  background-color: #ff6e6e; /* Red for important sections */
+  color: white;
+}
+
+.dashboardSummaryBox2 > a:last-child {
+  background-color: #333; /* Dark theme for last item */
+  color: white;
+}
+
+/* Hover effects for the circular links */
+.dashboardSummaryBox2 > a:hover {
+  transform: scale(1.05); /* Slight scale-up on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Chart styling */
+.lineChart {
+  width: 80%;
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doughnutChart {
+  width: 30vmax;
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardContainer {
+    border-left: none;
+    box-shadow: none;
+  }
+
+  .dashboardSummary > div {
+    flex-direction: column;
+  }
+
+  .dashboardSummary > div > p {
+    margin: 1rem 0;
+  }
+
+  .dashboardSummaryBox2 > a {
+    width: 8vmax;
+    height: 8vmax;
+    margin: 1.5rem;
+  }
+
+  .lineChart {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .doughnutChart {
+    width: 50vmax;
+    padding: 1.5rem;
+  }
+}
+
+/* Media query for smaller devices */
+@media screen and (max-width: 600px) {
+  .dashboardSummary > div > p {
+    font-size: 1.2rem;
+  }
+
+  .dashboardSummaryBox2 > a {
+    width: 7vmax;
+    height: 7vmax;
+    font-size: 1rem;
+  }
+
+  .lineChart, .doughnutChart {
+    width: 90%;
+    padding: 1rem;
+  }
+}

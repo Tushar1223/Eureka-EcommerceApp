@@ -1,0 +1,130 @@
+.myOrdersPage {
+  width: 100vw;
+  max-width: 100%;
+  padding: 0 5vmax;
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#myOrdersHeading {
+  text-align: center;
+  font: 400 1.8vmax "Roboto", sans-serif;
+  padding: 1vmax;
+  color: #fff;
+  background-color: #2c3e50;
+  border-bottom: 4px solid #e67e22;
+  border-radius: 8px 8px 0 0;
+  letter-spacing: 0.5px;
+}
+
+.myOrdersTable {
+  background-color: #fff;
+  margin: 2vmax 0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.myOrdersTable table {
+  width: 100%;
+  table-layout: fixed; /* Ensures full-width, equal column spacing */
+  border-collapse: collapse;
+}
+
+.myOrdersTable th, .myOrdersTable td {
+  padding: 1.2vmax;
+  text-align: left;
+  font-size: 1.1vmax;
+  vertical-align: middle;
+}
+
+.myOrdersTable th {
+  background-color: #e67e22;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+.myOrdersTable td {
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.myOrdersTable td.status {
+  color: #e74c3c; /* Default to processing */
+  font-weight: 500;
+}
+
+.myOrdersTable td.status.delivered {
+  color: #2ecc71; /* Green for delivered */
+}
+
+.myOrdersTable td.status.shipped {
+  color: #3498db; /* Blue for shipped */
+}
+
+.myOrdersTable td.actions {
+  width: 5%; /* Fix width to avoid taking extra space */
+  text-align: center;
+}
+
+.myOrdersTable tr:hover {
+  background-color: #f8f9fa;
+}
+
+.myOrdersTable a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.myOrdersTable a:hover {
+  color: #e74c3c;
+}
+
+.MuiDataGrid-columnHeader {
+  background-color: #e67e22;
+  padding: 1.2vmax !important;
+  border-bottom: 2px solid #d35400;
+  font-size: 1.1vmax;
+}
+
+.MuiDataGrid-columnHeader div {
+  color: #fff;
+  font-weight: 500;
+}
+
+.MuiDataGrid-iconSeparator {
+  display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .myOrdersPage {
+    padding: 0;
+    height: auto;
+    min-height: 93vh;
+  }
+
+  #myOrdersHeading {
+    font: 400 2.5vmax "Roboto", sans-serif;
+    padding: 6vw;
+  }
+
+  .myOrdersTable div {
+    font: 400 4vw "Roboto", sans-serif;
+    padding: 4vw;
+  }
+
+  .MuiDataGrid-columnHeader {
+    padding: 4vw !important;
+  }
+
+  .MuiDataGrid-columnHeader div {
+    font-size: 5vw !important;
+  }
+}

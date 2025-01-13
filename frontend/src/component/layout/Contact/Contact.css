@@ -1,0 +1,138 @@
+/* Contact Page Container */
+.contactContainer {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2vmax;
+}
+
+/* Contact Form */
+.contactForm {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2vmax 3vmax;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Form Heading */
+.contactForm h2 {
+  font: 500 2vmax "Roboto", sans-serif;
+  color: #333;
+  margin-bottom: 1vmax;
+  text-align: center;
+}
+
+/* Form Fields */
+.contactForm label {
+  display: block;
+  font: 400 1.2vmax "Roboto", sans-serif;
+  color: #555;
+  margin: 1vmax 0;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 1vmax;
+  margin-bottom: 1.5vmax;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1vmax;
+}
+
+.contactForm textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Submit Button */
+.contactForm button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1vmax;
+  font: 500 1.2vmax "Roboto", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%;
+}
+
+.contactForm button:hover {
+  background-color: #d62839;
+  transform: translateY(-3px);
+}
+/* Mail Button Animation */
+.mailBtn {
+  text-decoration: none;
+  position: absolute;
+  /* Start from the center left of the screen */
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: mailBtnAnimation 2s forwards;
+}
+
+.mailBtn > button {
+  text-decoration: none;
+  font: 200 1.5vmax "Roboto", sans-serif;
+  cursor: url("https://img.icons8.com/color/48/000000/edit--v2.png"), pointer;
+  padding: 1vmax 2vmax;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.mailBtn > button:hover {
+  background-color: #d62839;
+  transform: scale(1.1);
+}
+
+/* Keyframes for Mail Button Animation */
+@keyframes mailBtnAnimation {
+  0% {
+    left: 0;
+    transform: translateY(-50%); /* Center vertically */
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contactForm {
+    width: 90%;
+    padding: 2vmax;
+  }
+  
+  .contactForm h2 {
+    font-size: 1.8vmax;
+  }
+
+  .contactForm label {
+    font-size: 1vmax;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 0.9vmax;
+  }
+
+  .contactForm button {
+    font-size: 1vmax;
+  }
+}

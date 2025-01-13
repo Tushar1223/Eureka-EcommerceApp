@@ -1,0 +1,139 @@
+.profileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.profileContainer > div {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px; /* Increased padding */
+  margin: 20px; /* Increased margin for better spacing */
+  width: 45%; /* Ensuring equal width for both sections */
+  max-width: 500px; /* Slightly increased max-width */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.profileContainer > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profileContainer > div:first-child > h1 {
+  font-size: 2.8rem; /* Larger font size */
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profileContainer > div:first-child > img {
+  width: 200px; /* Larger image size */
+  height: 200px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+
+.profileContainer > div:first-child > img:hover {
+  transform: scale(1.1); /* Subtle zoom effect */
+}
+
+.profileContainer > div:first-child > a {
+  display: inline-block;
+  background-color: #ff6347;
+  font-size: 1.3rem; /* Increased button size */
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px; /* Larger padding */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.profileContainer > div:first-child > a:hover {
+  background-color: #e55342;
+}
+
+.profileContainer > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  text-align: left;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.profileContainer > div:last-child > div {
+  margin-bottom: 20px;
+}
+
+.profileContainer > div:last-child > div > h4 {
+  font-size: 1.6rem; /* Larger text size */
+  color: #333;
+}
+
+.profileContainer > div:last-child > div > p {
+  font-size: 1.3rem; /* Larger font size */
+  color: #777;
+}
+
+.profileContainer > div:last-child > div:last-child {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.profileContainer > div:last-child > div:last-child > a {
+  background-color: #555;
+  font-size: 1.3rem; /* Larger button size */
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px; /* Increased padding */
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.profileContainer > div:last-child > div:last-child > a:hover {
+  background-color: #333;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+
+  .profileContainer > div {
+    width: 90%; /* Full width for smaller screens */
+  }
+
+  .profileContainer > div:first-child > h1 {
+    font-size: 2.4rem;
+  }
+
+  .profileContainer > div:first-child > img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profileContainer > div:last-child > div > h4 {
+    font-size: 1.4rem;
+  }
+
+  .profileContainer > div:last-child > div > p {
+    font-size: 1.1rem;
+  }
+
+  .profileContainer > div:last-child > div:last-child > a {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+}

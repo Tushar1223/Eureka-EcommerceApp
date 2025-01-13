@@ -1,0 +1,197 @@
+/* About Section */
+.aboutSection {
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f4f8; /* Softer grey for a more refined background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Background Overlay */
+.aboutSectionGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    135deg,
+    rgba(78, 81, 255, 0.8),
+    rgba(74, 137, 189, 0.8)
+  );
+  opacity: 0.85;
+  z-index: -1;
+  animation: gradientAnimation 8s infinite alternate;
+}
+
+/* Main Container */
+.aboutSectionContainer {
+  background-color: white;
+  border-radius: 15px;
+  padding: 3rem;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.aboutSectionContainer:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading Style */
+.aboutSectionContainer > h1 {
+  font-family: "Merriweather", serif; /* Using a serif font for a classic touch */
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #4e51ff;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em; /* Adds spacing between letters for a modern look */
+  position: relative;
+  display: inline-block;
+}
+
+.aboutSectionContainer > h1::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #4e51ff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+
+/* About Content Wrapper */
+.aboutSectionContent {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Content Column */
+.aboutSectionColumn {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aboutSectionColumn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph Text */
+.aboutSectionColumn > p {
+  font-family: "Roboto", sans-serif; /* Modern sans-serif for body text */
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #444444;
+  margin-bottom: 1.5rem;
+  line-height: 1.8; /* Increased line-height for better readability */
+}
+
+/* Call to Action Button */
+.aboutSectionColumn > button {
+  margin-top: auto;
+  padding: 0.8rem 1.5rem;
+  background-color: #4e51ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.aboutSectionColumn > button:hover {
+  background-color: #3a3db8;
+  transform: translateY(-2px);
+}
+
+/* Span for Additional Info */
+.aboutSectionColumn > span {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #666666;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* SVG Icons */
+.aboutSectionContainer2 > a > svg {
+  font-size: 2.5rem;
+  margin: 1rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.aboutSectionContainer2 > a > svg:hover {
+  transform: scale(1.1);
+  color: #4e51ff;
+}
+
+/* Specific SVG Icon Colors */
+.youtubeSvgIcon {
+  color: tomato;
+}
+
+.instagramSvgIcon {
+  color: rgb(144, 81, 202);
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .aboutSectionContainer {
+    padding: 2rem;
+  }
+
+  .aboutSectionContainer > h1 {
+    font-size: 2.4rem;
+  }
+
+  .aboutSectionContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutSectionColumn {
+    width: 100%;
+    max-width: none;
+  }
+
+  .aboutSectionContainer2 > a > svg {
+    font-size: 2rem;
+  }
+}

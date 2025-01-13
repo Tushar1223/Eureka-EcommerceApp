@@ -1,0 +1,120 @@
+footer {
+  /* margin-top: 8vmax; Reduced from 10vmax */
+  padding: 2.5vmax;  /* Reduced from 3vmax */
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.leftFooter {
+  width: 18%; /* Reduced from 20% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftFooter > h4 {
+  font-family: "Roboto";
+  font-size: 1vmax; /* Reduced from 1.2vmax */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.leftFooter > p {
+  text-align: center;
+  font-size: 1vmax; /* Reduced from 1.2vmax */
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  margin-top: 0.4vmax; /* Slightly reduced */
+  color: #cfcfcf;
+}
+
+.leftFooter > img {
+  width: 8vmax; /* Reduced from 10vmax */
+  margin: 1vmax;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.leftFooter > img:hover {
+  transform: scale(1.05);
+}
+
+.midFooter {
+  width: 45%; /* Reduced from 50% */
+  text-align: center;
+}
+
+.midFooter > h1 {
+  font-size: 3vmax; /* Reduced from 3.5vmax */
+  font-family: "Roboto";
+  color: #eb4034;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.8vmax; /* Slightly reduced */
+}
+
+.midFooter > p {
+  max-width: 55%; /* Reduced from 60% */
+  font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0.8vmax auto; /* Reduced margin */
+  font-size: 1vmax; /* Reduced from 1.2vmax */
+  color: #d1d1d1;
+}
+
+.rightFooter {
+  width: 18%; /* Reduced from 20% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightFooter > h4 {
+  font-family: "Roboto";
+  font-size: 1.2vmax; /* Reduced from 1.4vmax */
+  text-decoration: underline;
+  color: #eb4034;
+  margin-bottom: 0.5vmax;
+}
+
+.rightFooter > a {
+  text-decoration: none;
+  font-size: 1.1vmax; /* Reduced from 1.3vmax */
+  font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  transition: color 0.3s ease;
+  margin: 0.4vmax; /* Slightly reduced */
+}
+
+.rightFooter > a:hover {
+  color: #eb4034;
+  text-shadow: 0px 0px 5px rgba(235, 64, 52, 0.7);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftFooter,
+  .midFooter,
+  .rightFooter {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2vmax;
+  }
+
+  .midFooter > h1 {
+    font-size: 2.5vmax; /* Reduced from 3vmax */
+  }
+
+  .midFooter > p {
+    max-width: 80%;
+    font-size: 1vmax; /* Reduced from 1.1vmax */
+  }
+}

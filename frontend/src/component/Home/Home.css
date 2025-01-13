@@ -1,0 +1,314 @@
+/* Banner Section */
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #ff416c, #ff4b2b); /* New pink to red gradient */
+  color: white;
+  border: none;
+  padding: 0.8vmax 1.5vmax; /* Slightly smaller padding */
+  font-size: 1.2vmax;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px; /* Rounded pill-shaped button */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+  transition: all 0.4s ease; /* Smoother transition effect */
+  display: flex;
+  align-items: center; /* Center icon and text */
+  justify-content: center; /* Center text and icon together */
+  letter-spacing: 1px; /* Slight letter spacing for text */
+}
+
+.carousel-button:hover {
+  background: linear-gradient(45deg, #ff3a5b, #ff3020); /* Darker reddish gradient on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+  transform: translate(-50%, -50%) scale(1.08); /* Smooth scaling effect*/
+}
+.scroll-icon {
+  margin-left: 10px; /* Space between text and icon */
+  font-size: 1.5vmax; /* Icon size */
+  transition: transform 0.4s ease; /* Smooth icon transformation */
+}
+.carousel-button:hover .scroll-icon {
+  transform: translateX(5px); /* Slide icon slightly on hover */
+}
+
+
+
+/* Home Heading */
+.homeHeading {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.4vmax;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 5vmax auto;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+/* Product Cards Container */
+.container {
+  display: flex;
+  margin: 2vmax auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+/* Product Card Styling */
+.productCard {
+  width: 16vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.3s ease-in-out;
+  padding: 1vmax;
+  background: #f0f0f0; /* Light greyish-whitish background color */
+  border-radius: 1vmax;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Ensure content doesn't get cropped */
+}
+
+/* Image Section with Spacing and 3D Effect */
+.productCard > img {
+  width: 100%;
+  height: 12vmax; /* Slightly larger image area */
+  object-fit: contain;
+  margin-top: 1vmax;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  background-color: transparent;
+  
+  /* Enhanced drop shadow for a more prominent 3D effect */
+  filter: drop-shadow(8px 8px 12px rgba(0, 0, 0, 0.3));
+  margin-bottom: 0.5vmax;
+  border-radius: 0.5vmax;
+}
+
+/* Product Info Section */
+.productCard > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3vmax;
+  margin: 1vmax 0.5vmax;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2; /* Adjusted line-height for better readability */
+}
+
+/* Reviews Section */
+.productCard > div {
+  margin: 0.5vmax 0; /* Adjusted spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Price Section */
+.productCard > span {
+  margin: 0.5vmax;
+  color: #ff6347;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.3vmax; /* Larger font size for price */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Hover Effects */
+.productCard:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.5vmax); /* Lift the card slightly */
+}
+
+.productCard:hover > img {
+  transform: scale(1.1); /* Zoom effect */
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.4)); /* Stronger shadow */
+}
+
+/* Responsive Design Adjustments */
+
+/* For screens between 771px and 600px */
+@media screen and (max-width: 771px) {
+  
+  .carousel-button{
+    display: none;
+  }
+  
+  .productCard {
+    width: 85%;
+    margin: 2vmax auto;
+    padding: 1vmax;
+  }
+
+  .productCard > p {
+    font-size: 1.5vmax;
+  }
+
+  .productCard > div {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productCard > span {
+    font-size: 1.3vmax;
+  }
+
+  .productCard > div > span {
+    margin: 0.5vmax;
+    font: 300 1vmax "Roboto", sans-serif;
+  }
+}
+
+/* For screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  .productCard {
+    width: 85%;
+    margin: 2vmax auto;
+    padding: 1.5vmax;
+  }
+
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+
+  .productCard > div {
+    margin: 0;
+    display: block;
+    text-align: center;
+  }
+
+  .productCard > span {
+    font-size: 1.5vmax;
+  }
+
+  .productCard > div > span {
+    margin: 0.5vmax;
+    font: 300 1vmax "Roboto", sans-serif;
+  }
+}
+
+.categoryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.categoryCard {
+  flex: 1 1 calc(15% - 30px); /* Reduced size */
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 15px; /* Adjusted padding */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #ffffff;
+  max-width: 138px; /* Reduced maximum width */
+  
+}
+
+.categoryCard img {
+  width: 100%;
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease-in-out;
+  max-height: 100px; /* Reduced image height */
+  object-fit: cover;
+}
+
+.categoryCard img:hover {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+.categoryCard p {
+  margin-top: 8px;
+  font-size: 1.2rem; /* Reduced font size */
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.categoryCard:hover p {
+  color: #ff6347; /* Add a hover color effect for the text */
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 900px) {
+  .categoryCard {
+    flex: 1 1 calc(20% - 15px); /* Reduced size */
+    padding: 10px; /* Adjusted padding */
+    max-width: 120px; /* Limit the maximum width */
+  }
+
+  .categoryCard img {
+    max-height: 80px; /* Smaller image height */
+  }
+}
+
+/* For smaller screens */
+@media screen and (max-width: 600px) {
+  .categoryCard {
+    flex: 1 1 calc(30% - 15px); /* Further reduced size */
+    padding: 10px; /* Reduced padding */
+    max-width: 100px; /* Smaller maximum width */
+  }
+
+  .categoryCard img {
+    max-height: 70px; /* Adjust image height */
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 400px) {
+  .categoryContainer {
+    display: flex;
+    flex-wrap: nowrap; /* No wrapping, so it will scroll horizontally */
+    overflow-x: auto; /* Enable horizontal scroll */
+    padding: 10px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+    scroll-snap-type: x mandatory; /* Ensures proper scroll snapping */
+    margin-bottom: 0vmax;
+  }
+
+  .categoryCard {
+    flex: 0 0 calc(19% - 10px); /* 3 cards of equal width (33.33%) */
+    width: calc(19% - 10px); /* Ensure width is calculated for 3 items */
+    margin-right: 10px; /* Space between category cards */
+    scroll-snap-align: start; /* Snaps items into place when scrolling */
+  }
+
+  .categoryCard:first-child {
+    margin-left: 0; /* Ensure the first card starts at the left */
+  }
+
+  .categoryCard img {
+    width: 50px; /* Smaller icon size */
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .categoryCard p {
+    font-size: 0.7rem; /* Adjusted font size */
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+}
