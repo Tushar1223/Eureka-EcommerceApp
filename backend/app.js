@@ -43,7 +43,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "*", // Allow all origins
+    origin: "http://localhost:3000", // Allow all origins
     methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Specify allowed headers
   })
