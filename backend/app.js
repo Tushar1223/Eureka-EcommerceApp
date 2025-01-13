@@ -38,6 +38,15 @@ app.use("/api/v1", payment);
 // });
 
 // Middleware for Errors
+
+const cors = require("cors");
+app.use(
+  cors({
+    origin: ["https://your-frontend-domain.vercel.app","*"],
+    credentials: true,
+  })
+);
+
 app.use(errorMiddleware);
 
 module.exports = app;
