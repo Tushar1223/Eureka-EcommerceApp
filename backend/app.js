@@ -40,10 +40,12 @@ app.use("/api/v1", payment);
 // Middleware for Errors
 
 const cors = require("cors");
+
 app.use(
   cors({
-    origin: ["https://your-frontend-domain.vercel.app","*"],
-    credentials: true,
+    origin: "*", // Allow all origins
+    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed HTTP methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Specify allowed headers
   })
 );
 
