@@ -47,15 +47,6 @@ app.use("/api/v1", payment);
 
 // Middleware for Errors
 
-const cors = require("cors");
-
-app.use(
-  cors({
-    origin: "http://localhost:3000", // Allow all origins
-    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed HTTP methods
-    allowedHeaders: ["Content-Type", "Authorization"], // Specify allowed headers
-  })
-);
 
 app.use(errorMiddleware);
 
