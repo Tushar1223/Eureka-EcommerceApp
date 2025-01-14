@@ -23,7 +23,7 @@ app.use(fileUpload());
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],  // Allow dev and prod origins
+    origin: ["http://localhost:3000","https://eureka-ecommerce-app.vercel.app"],  // Allow dev and prod origins
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allowed methods
     credentials: true, // Allow cookies and credentials
   })
