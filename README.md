@@ -1,10 +1,8 @@
 # 🚀 Eureka eCommerce App  
 
-![Eureka Banner](https://your-image-url.com/banner.png)  
+![Eureka Banner](https://media.licdn.com/dms/image/v2/D562DAQFVZcIFTwTO9A/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1726196634362?e=1742212800&v=beta&t=qb5zxeas9_pTShoPnjF0YXQuaoBdBe70J1adlVimW18)  
 
-[![License](https://img.shields.io/github/license/Tushar1223/Eureka-EcommerceApp)](LICENSE)  
-[![Issues](https://img.shields.io/github/issues/Tushar1223/Eureka-EcommerceApp)](https://github.com/Tushar1223/Eureka-EcommerceApp/issues)  
-[![Stars](https://img.shields.io/github/stars/Tushar1223/Eureka-EcommerceApp)](https://github.com/Tushar1223/Eureka-EcommerceApp/stargazers)  
+
 
 ---
 
@@ -48,10 +46,10 @@ Follow these steps to set up **Eureka** on your local machine:
 ```bash
 git clone https://github.com/Tushar1223/Eureka-EcommerceApp.git
 cd Eureka-EcommerceApp
+```
+
 2️⃣ Install Dependencies
-bash
-Copy
-Edit
+``` bash
 # Install backend dependencies
 cd backend
 npm install
@@ -59,17 +57,32 @@ npm install
 # Install frontend dependencies
 cd ../frontend
 npm install
+```
 3️⃣ Setup Environment Variables
 Create a .env file inside the backend folder with the following values:
 
-env
-Copy
-Edit
-PORT= DB_URI = STRIPE_API_KEY= STRIPE_SECRET_KEY= JWT_SECRET= JWT_EXPIRE= COOKIE_EXPIRE= SMPT_SERVICE = SMPT_MAIL= SMPT_PASSWORD= SMPT_HOST= SMPT_PORT= CLOUDINARY_NAME CLOUDINARY_API_KEY CLOUDINARY_API_SECRET fill each filed with your info respectively
+``` bash
+PORT=
+DB_URI =
+STRIPE_API_KEY=
+STRIPE_SECRET_KEY=
+JWT_SECRET=
+JWT_EXPIRE=
+COOKIE_EXPIRE=
+SMPT_SERVICE =
+SMPT_MAIL=
+SMPT_PASSWORD=
+SMPT_HOST=
+SMPT_PORT=
+CLOUDINARY_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+fill each filed with your info respectively
+
+```
 4️⃣ Run the Application
-bash
-Copy
-Edit
+
+``` bash
 # Start backend server
 cd backend
 npm run dev
@@ -79,11 +92,16 @@ cd ../frontend
 npm run dev
 The app should now be running on http://localhost:3000. 🎉
 
-🎮 Usage
-1️⃣ Register/Login with an account
-2️⃣ Browse products and add them to your cart
-3️⃣ Proceed to checkout and make a secure payment
-4️⃣ Track your orders in your user dashboard
+```
+## 🎮 Usage  
+
+1️⃣ **Register/Login** with an account.  
+
+2️⃣ **Browse products** and add them to your cart.  
+
+3️⃣ **Proceed to checkout** and make a secure payment.  
+
+4️⃣ **Track your orders** in your user dashboard.  
 
 
 📩 Contact
