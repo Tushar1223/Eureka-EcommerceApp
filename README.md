@@ -1,4 +1,4 @@
-# 🚀 Eureka eCommerce App  
+# 🛒 Eureka eCommerce App  
 
 ![Eureka Banner](https://media.licdn.com/dms/image/v2/D562DAQFVZcIFTwTO9A/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1726196634362?e=1742212800&v=beta&t=qb5zxeas9_pTShoPnjF0YXQuaoBdBe70J1adlVimW18)  
 
@@ -104,8 +104,14 @@ The app should now be running on http://localhost:3000. 🎉
 4️⃣ **Track your orders** in your user dashboard.  
 
 
-📩 Contact
-📌 Tushar Sharma
-🔗 LinkedIn
-🌍 Portfolio
-📧 tushar007king@gmail.com
+## 📩 Contact  
+
+📌 **Tushar Sharma**  
+
+🔗 **[LinkedIn](https://www.linkedin.com/in/tushar-sharma003/)**  
+
+🌍 **[Portfolio](https://tushar-porfolio.onrender.com/)**  
+
+📧 **[Email](mailto:tushar007king@gmail.com)**  
+
+📂 **[Project Repository](https://github.com/Tushar1223/Linkup-Social-media-App)**  
