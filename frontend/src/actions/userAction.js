@@ -48,7 +48,7 @@ export const login = (email, password) => async (dispatch) => {
     const { data } = await axios.post(
       `https://eureka-ecommerceapp.onrender.com/api/v1/login`,
       { email, password },
-      config,
+      // config,
       {
         withCredentials: true, 
       }
