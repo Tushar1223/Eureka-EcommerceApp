@@ -3,13 +3,15 @@
 const sendToken = (user, statusCode, res) => {
   const token = user.getJWTToken();
   // options for cookie
-  console.log("Token cookie set for user:", user.email);
-console.log("Token value:", token);
+ 
+
   const options = {
     expires: new Date(
       Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000
     ),
     httpOnly: true,
+  secure: true,        
+  sameSite: "None",
   };
 // console.log(token);
   res.status(statusCode).cookie("token", token, options).json({

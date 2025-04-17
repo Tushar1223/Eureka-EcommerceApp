@@ -46,9 +46,12 @@ export const login = (email, password) => async (dispatch) => {
     const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.post(
-      `https://eureka-ecommerceapp.onrender.com/api/v1/login`,
+      `http://localhost:4000/api/v1/login`,
       { email, password },
-      config
+      config,
+      {
+        withCredentials: true, 
+      }
     );
 
     dispatch({ type: LOGIN_SUCCESS, payload: data.user });
