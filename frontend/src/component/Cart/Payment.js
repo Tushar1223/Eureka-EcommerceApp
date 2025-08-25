@@ -34,7 +34,6 @@ const Payment = ({ history }) => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
   const { error } = useSelector((state) => state.newOrder);
-  // const { cartItems } = useSelector((state) => state.cart);
   const paymentData = {
     amount: Math.round(orderInfo.totalPrice * 100),
   };
@@ -59,11 +58,8 @@ const Payment = ({ history }) => {
           "Content-Type": "application/json",
         },
       };
-      const { data } = await axios.post(
-        "/payment/process",
-        paymentData,
-        config
-      );
+      // changes this payment path
+      const { data } = await axios.post("/payment/process", paymentData, config);
 
       const client_secret = data.client_secret;
 
